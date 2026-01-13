@@ -10,7 +10,7 @@ export default function Header(props) {
   useEffect(() => {
     async function checkHealth() {
       try {
-        const url = "http://localhost:3000/health";
+        const url = "http://54.207.61.243:3000/health";
         const response = await axios(url);
         const responseStatus = response.data.status;
         setStatusText(responseStatus);

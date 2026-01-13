@@ -26,14 +26,14 @@ body {
     "Menu Content";
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .display {
     display: grid;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: 60px 1fr 100px;
+    grid-template-rows: 60px 100px 1fr;
     grid-template-areas:
       "Header Header"
-      "Content Content"
+      "Menu Menu"
       "Content Content";
   }
 }

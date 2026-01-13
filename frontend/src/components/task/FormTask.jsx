@@ -18,7 +18,7 @@ export default function FormTask({ onAddTask }) {
     }
 
     try {
-      const url = `http://localhost:3000/tasks/`;
+      const url = `http://54.207.61.243:3000/tasks/`;
 
       const response = await axios.post(url, { name: textToSubmit });
       toast.success(response.data);
@@ -44,13 +44,13 @@ export default function FormTask({ onAddTask }) {
         value={taskText}
         onChange={(e) => setTaskText(e.target.value)}
         // Reduzi o padding (p-2) para não ficar tão "gordo" no mobile
-        className="flex-1 p-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all outline-none text-sm"
+        className="flex-1 wrap p-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all outline-none text-sm max-w-full"
       />
 
       <button
         type="submit"
         // Removi o texto "Criar" no mobile muito pequeno para economizar espaço (opcional)
-        className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors shadow-md active:scale-95"
+        className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors shadow-md active:scale-95 grow"
       >
         <PlusCircle size={20} />
         <span className="hidden xs:block">Criar</span>

@@ -31,7 +31,7 @@ export default function TableTask() {
   const fetchTasks = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:3000/tasks/");
+      const response = await axios.get("http://54.207.61.243:3000/tasks/");
       setTasks(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
       console.error("Erro ao buscar tarefas:", error);
@@ -49,7 +49,7 @@ export default function TableTask() {
   const handleDelete = async (id) => {
     if (!window.confirm("Tem certeza que deseja excluir esta tarefa?")) return;
     try {
-      await axios.delete(`http://localhost:3000/tasks/${id}`);
+      await axios.delete(`http://54.207.61.243:3000/tasks/${id}`);
       setTasks(tasks.filter((t) => t._id !== id));
       toast.success("Tarefa removida com sucesso!");
     } catch (error) {
@@ -61,7 +61,7 @@ export default function TableTask() {
   const handleToggleStatus = async (task) => {
     try {
       const newStatus = !task.completed;
-      await axios.post(`http://localhost:3000/tasks/${task._id}`, {
+      await axios.post(`http://54.207.61.243:3000/tasks/${task._id}`, {
         name: task.name,
         completed: newStatus,
       });
@@ -83,7 +83,7 @@ export default function TableTask() {
   const handleSaveEdit = async (id) => {
     if (!editValue.trim()) return toast.warn("O nome não pode estar vazio");
     try {
-      await axios.post(`http://localhost:3000/tasks/${id}`, {
+      await axios.post(`http://54.207.61.243:3000/tasks/${id}`, {
         name: editValue,
       });
       setTasks(
