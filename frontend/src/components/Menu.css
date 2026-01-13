@@ -1,0 +1,11 @@
+.menu {
+    grid-area: Menu;
+    background-color: #fff;
+    box-shadow: 12px 7px 19px 1px #00000013;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+

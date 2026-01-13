@@ -1,0 +1,13 @@
+.userButton {
+  display: flex;
+  align-items: center;
+}
+
+.userDropDownImg {
+    margin: 0px 15px;
+}
+
+.iconDropDown {
+    margin-right: 12px;
+    cursor: pointer;
+}

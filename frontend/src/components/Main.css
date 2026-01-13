@@ -1,0 +1,8 @@
+.content {
+    grid-area: Content;
+    color: #000;
+    background-color: var(--color-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

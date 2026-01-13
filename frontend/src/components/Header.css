@@ -1,0 +1,17 @@
+.header {
+    grid-area: Header;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: var(--color-1);
+}
+
+.status {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
