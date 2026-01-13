@@ -35,8 +35,8 @@ app.listen(port, () => {
   console.log("═══════════════════════════════════════════");
   console.log("🎉 ToDóList - Sistema de controle de tarefas");
   console.log("═══════════════════════════════════════════");
-  console.log(`📍 URL: http://localhost:${port}`);
-  console.log(`🏥 Health: http://localhost:${port}/health`);
+  console.log(`📍 URL: http://${process.env.URL}:${port}`);
+  console.log(`🏥 Health: http://${process.env.URL}:${port}/health`);
   console.log(`🌍 Ambiente: ${process.env.NODE_ENV || "production"}`);
   console.log("═══════════════════════════════════════════");
   console.log("");
@@ -50,8 +50,6 @@ app.listen(port, () => {
   console.log("   POST    /tasks");
   console.log("   DELETE    /tasks/:id");
   console.log("   POST    /tasks/:id");
-  console.log("");
-  console.log("📚 Documentação completa em: http://localhost:" + port);
   console.log("");
   console.log(`Servidor executando na porta ${port}...`);
 });
